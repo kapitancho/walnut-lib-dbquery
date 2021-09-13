@@ -11,9 +11,7 @@
 			"Walnut\\Lib\\DbQuery\\": "src/"
 		}
 	},
-	"require": {
-		"ext-pdo": "*"
-	},
+	"require": {},
 	"require-dev": {
 		"vimeo/psalm": "^4.9.3",
 		"phpunit/phpunit": "^9.5.9"
