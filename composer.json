@@ -12,8 +12,7 @@
 		}
 	},
 	"require": {
-		"ext-pdo": "*",
-		"walnut/lib_dbquery_pdo": "dev-main"
+		"ext-pdo": "*"
 	},
 	"require-dev": {
 		"vimeo/psalm": "^4.9.3",
