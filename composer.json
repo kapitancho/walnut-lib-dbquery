@@ -1,5 +1,5 @@
 {
-    "name": "walnut/lib_dbquery_pdo",
+    "name": "walnut/lib_dbquery",
     "authors": [
         {
             "name": "Marian Kostadinov",
@@ -8,7 +8,7 @@
     ],
 	"autoload": {
 		"psr-4": {
-			"Walnut\\Lib\\DbQuery\\Pdo\\": "src/"
+			"Walnut\\Lib\\DbQuery\\": "src/"
 		}
 	},
 	"require": {
