@@ -40,18 +40,18 @@ final class TreeDataResultBag extends ResultBag {
 		 */
 		foreach($this->data as $key => $rows) {
 			$rr = [];
-			foreach($rows as $row) {
+			foreach($rows as $r => $row) {
 				/**
 				 * @var array|object|scalar $value
 				 */
 				$value = $generator->send($row);
-				$rr[] = $value;
+				/**
+				 * @var array-key $gKey
+				 */
+				$gKey = $generator->key() ?? $r;
+				$rr[$gKey] = $value;
 			}
-			/**
-			 * @var array-key $gKey
-			 */
-			$gKey = $generator->key() ?? $key;
-			$clone->data[$gKey] = $rr;
+			$clone->data[$key] = $rr;
 		}
 		return $clone;
 	}
