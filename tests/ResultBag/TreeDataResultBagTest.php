@@ -19,6 +19,7 @@ final class TreeDataResultBagTest extends TestCase {
 		$this->assertNotNull($bag->withKey(1));
 		$this->assertEmpty($bag->withKey(5));
 		$this->assertEquals(['Name 1', 'Name 2', 'Name 3'], $bag->collect('name'));
+		$this->assertEquals([1, 3], $bag->keys());
 
 		$newBag = $bag->modify((static function() {
 			$q = yield;

@@ -28,14 +28,14 @@ final class ListResultBag extends ResultBag {
 	}
 
 	public function modify(\Generator $generator): ListResultBag {
-		$clone = clone $this;
+		$cloneData = [];
 		/**
 		 * @var array<array|object|scalar> $this->data
 		 */
 		foreach($this->data as $key => $row) {
-			$clone->data[$key] = $generator->send($row);
+			$cloneData[$key] = $generator->send($row);
 		}
-		return $clone;
+		return new self($cloneData);
 	}
 
 }

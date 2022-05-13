@@ -12,6 +12,7 @@ interface QueryExecutor {
 	 * @param string $query
 	 * @param array<scalar|null>|null $boundParams
 	 * @return QueryResult
+	 * @throws QueryExecutionException
 	 */
 	public function execute(string $query, array $boundParams = null): QueryResult;
 

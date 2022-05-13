@@ -9,7 +9,7 @@ namespace Walnut\Lib\DbQuery;
 final class FixedQuery implements Query {
 
 	public function __construct(
-		public /*readonly*/ string $query
+		public readonly string $query
 	) {}
 
 	/**

@@ -13,8 +13,8 @@ final class PlaceholderQuery implements Query {
 	 * @param string[] $placeholders
 	 */
 	public function __construct(
-		private /*readonly*/ string $query,
-		private /*readonly*/ array $placeholders
+		private readonly string $query,
+		private readonly array $placeholders
 	) {}
 
 	/**

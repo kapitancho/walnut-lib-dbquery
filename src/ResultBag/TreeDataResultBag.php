@@ -34,7 +34,7 @@ final class TreeDataResultBag extends ResultBag {
 	}
 
 	public function modify(\Generator $generator): TreeDataResultBag {
-		$clone = new self([]);
+		$cloneData = [];
 		/**
 		 * @var array<string, array<array|object|scalar>> $this->data
 		 */
@@ -51,9 +51,9 @@ final class TreeDataResultBag extends ResultBag {
 				$gKey = $generator->key() ?? $r;
 				$rr[$gKey] = $value;
 			}
-			$clone->data[$key] = $rr;
+			$cloneData[$key] = $rr;
 		}
-		return $clone;
+		return new self($cloneData);
 	}
 
 }

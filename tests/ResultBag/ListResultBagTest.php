@@ -15,6 +15,7 @@ final class ListResultBagTest extends TestCase {
 		$this->assertNotNull($bag->withKey(1));
 		$this->assertNull($bag->withKey(5));
 		$this->assertEquals(['Name 1', 'Name 2', 'Name 3'], $bag->collect('name'));
+		$this->assertEquals([1, 2, 3], $bag->keys());
 
 		$newBag = $bag->modify((static function() {
 			$q = yield;

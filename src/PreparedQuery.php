@@ -13,8 +13,8 @@ final class PreparedQuery implements Query {
 	 * @param string[] $boundParams
 	 */
 	public function __construct(
-		public /*readonly*/ string $query,
-		public /*readonly*/ array $boundParams
+		public readonly string $query,
+		public readonly array $boundParams
 	) {}
 
 	/**

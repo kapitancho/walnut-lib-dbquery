@@ -28,5 +28,5 @@ interface QueryResult {
 	public function collectAsList(): ListResultBag;
 	public function collectAsTreeData(): TreeDataResultBag;
 	public function collectAsHash(): ListResultBag;
-
+	public function rowCount(): int;
 }

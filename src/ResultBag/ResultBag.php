@@ -8,7 +8,7 @@ namespace Walnut\Lib\DbQuery\ResultBag;
 abstract class ResultBag {
 
 	public function __construct(
-		protected /*readonly*/ array $data
+		protected readonly array $data
 	) {}
 
 	/**
@@ -34,6 +34,10 @@ abstract class ResultBag {
 
 	public function all(): array {
 		return $this->data;
+	}
+
+	public function keys(): array {
+		return array_keys($this->data);
 	}
 
 	public function withKey(string $key): mixed {
