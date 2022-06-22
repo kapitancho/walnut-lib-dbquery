@@ -2,6 +2,8 @@
 
 namespace Walnut\Lib\DbQuery\ResultBag;
 
+use Generator;
+
 /**
  * @package Walnut\Lib\DbQuery
  */
@@ -33,7 +35,10 @@ final class TreeDataResultBag extends ResultBag {
 		return $this->data[$key] ?? [];
 	}
 
-	public function modify(\Generator $generator): TreeDataResultBag {
+	/**
+	 * @param Generator<array|object|scalar> $generator
+	 */
+	public function modify(Generator $generator): TreeDataResultBag {
 		$cloneData = [];
 		/**
 		 * @var array<string, array<array|object|scalar>> $this->data

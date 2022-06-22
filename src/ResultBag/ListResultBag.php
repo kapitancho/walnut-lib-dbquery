@@ -2,6 +2,8 @@
 
 namespace Walnut\Lib\DbQuery\ResultBag;
 
+use Generator;
+
 /**
  * @package Walnut\Lib\DbQuery
  */
@@ -27,7 +29,10 @@ final class ListResultBag extends ResultBag {
 		return array_keys($result);
 	}
 
-	public function modify(\Generator $generator): ListResultBag {
+	/**
+	 * @param Generator<array|object|scalar> $generator
+	 */
+	public function modify(Generator $generator): ListResultBag {
 		$cloneData = [];
 		/**
 		 * @var array<array|object|scalar> $this->data

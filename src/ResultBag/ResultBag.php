@@ -2,6 +2,8 @@
 
 namespace Walnut\Lib\DbQuery\ResultBag;
 
+use Generator;
+
 /**
  * @package Walnut\Lib\DbQuery
  */
@@ -30,7 +32,10 @@ abstract class ResultBag {
 	 */
 	abstract protected function extractValues(string $key): array;
 
-	abstract public function modify(\Generator $generator): self;
+	/**
+	 * @param Generator<array|object|scalar> $generator
+	 */
+	abstract public function modify(Generator $generator): self;
 
 	public function all(): array {
 		return $this->data;
