@@ -7,6 +7,11 @@ namespace Walnut\Lib\DbQuery;
  * @package Walnut\Lib\DbQuery
  */
 interface QueryExecutor {
+	/**
+	 * @param string $query
+	 * @return PreparedQueryExecutor
+	 */
+	public function prepare(string $query): PreparedQueryExecutor;
 
 	/**
 	 * @param string $query

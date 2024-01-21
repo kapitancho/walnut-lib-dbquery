@@ -15,15 +15,8 @@ interface QueryResult {
 	 */
 	public function all(): array;
 
-	/**
-	 * @return mixed
-	 */
-	public function first(): mixed;
-
-	/**
-	 * @return mixed
-	 */
-	public function singleValue(): mixed;
+	public function first(): string|int|float|bool|null|array|object;
+	public function singleValue(): string|int|float|bool|null;
 
 	public function collectAsList(): ListResultBag;
 	public function collectAsTreeData(): TreeDataResultBag;
